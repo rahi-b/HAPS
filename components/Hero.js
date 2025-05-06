@@ -13,7 +13,7 @@ export const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center py-12"
     >
       {/* Background image */}
-      <div className="absolute inset-0 bg-[#1c1c1a] z-0">
+      <div className="absolute inset-0 bg-[#4b276c] z-0">
         <div className="absolute inset-0 bg-[url('/textures/noise.png')] opacity-5 mix-blend-overlay"></div>
       </div>
 

@@ -1,0 +1,91 @@
+import React from "react";
+
+export const OurProcess = () => {
+  const processSteps = [
+    {
+      number: "01",
+      title: "Initial Consultation",
+      description:
+        "We begin with a thorough assessment of your needs and goals to understand how we can best support your mental health journey.",
+    },
+    {
+      number: "02",
+      title: "Scheduling and Sessions",
+      description:
+        "We work together to create a schedule that fits your life, ensuring consistent support through regular therapy sessions.",
+    },
+    {
+      number: "03",
+      title: "Tailored Therapy",
+      description:
+        "Based on your unique needs, we develop personalized approaches that address your specific challenges and support your growth.",
+    },
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mb-10">
+        <span className="inline-flex items-center gap-2 text-md font-semibold text-gray-700">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="#444444"
+            >
+              <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
+              <path
+                d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
+                fill="none"
+                stroke="#444444"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          OUR PROCESS
+        </span>
+      </div>
+
+      <div className="mb-10">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-meduim tracking-tight text-gray-900">
+          Take a Break, Your Mental Health <br /> Deserves It
+        </h2>
+      </div>
+
+      <div className="mb-16">
+        <button className="px-4 py-2 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-black hover:text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer">
+          START YOUR CONSULTATION
+        </button>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {processSteps.map((step, index) => (
+          <div
+            key={index}
+            className="group relative border-l px-5 border-gray-500 pt-8 rounded-md cursor-pointer overflow-hidden"
+          >
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-[#4b276c] opacity-0 group-hover:opacity-90 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out z-0"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="absolute -top-30 left-5 my-8">
+                <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gray-900 text-white text-xl font-medium">
+                  {step.number}
+                </div>
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4 my-18 group-hover:text-white transition-colors duration-300">
+                {step.title}
+              </h3>
+              <p className="text-base text-gray-600 mb-4 group-hover:text-gray-200 transition-colors duration-300">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
