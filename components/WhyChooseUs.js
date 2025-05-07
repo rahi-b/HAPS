@@ -25,7 +25,7 @@ export const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row md:h-lvh">
+    <div className="flex flex-col-reverse md:flex-row md:h-lvh">
       {/* Left side - Image */}
       <div className="w-full md:w-1/2 h-96 md:h-auto relative">
         <Image
@@ -41,13 +41,30 @@ export const WhyChooseUs = () => {
       {/* Right side - Content */}
       <div className="w-full md:w-1/2 bg-[#4b276c] text-white p-8 md:p-12 lg:p-16">
         <div className="mb-4">
-          <span className="inline-flex items-center text-sm font-medium">
-            <span className="mr-2 h-1.5 w-1.5 rounded-full bg-white"></span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="#444444"
+            >
+              <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
+              <path
+                d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
+                fill="none"
+                stroke="#ffff"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
             WHY CHOOSE US
           </span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-6xl font-meduim mb-6">
           Your Mind Deserves Peace and Care
         </h2>
 
@@ -117,7 +134,7 @@ export const WhyChooseUs = () => {
                 )}
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <h3 className="text-xl font-medium mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             </div>
