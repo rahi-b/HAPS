@@ -1,4 +1,9 @@
+"use client"
+
 import React from "react";
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const OurProcess = () => {
   const processSteps = [
@@ -26,24 +31,7 @@ export const OurProcess = () => {
     <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-10">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700">
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="#444444"
-            >
-              <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-              <path
-                d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                fill="none"
-                stroke="#444444"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+          <AnimationSvg />
           OUR PROCESS
         </span>
       </div>
@@ -55,7 +43,7 @@ export const OurProcess = () => {
       </div>
 
       <div className="mb-16">
-        <button className="px-4 py-2 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-black hover:text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer">
+        <button className="px-4 py-2 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-black hover:text-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-500 cursor-pointer">
           START YOUR CONSULTATION
         </button>
       </div>

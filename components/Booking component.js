@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from 'react';
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const BookingForm = ()=> {
   const [formData, setFormData] = useState({
@@ -27,7 +30,7 @@ export const BookingForm = ()=> {
   
   const redirectToWhatsApp = () => {
     // The phone number should be in international format without any symbols
-    const phoneNumber = "1234567890"; // Replace with your actual WhatsApp number
+    const phoneNumber = "+918086158928"; // Replace with your actual WhatsApp number
     
     // Create a pre-filled message using the form data
     const message = `Hello, my name is ${formData.name}. I'd like to book a mental health consultation on ${formData.date}. ${formData.message}`;
@@ -107,14 +110,14 @@ export const BookingForm = ()=> {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleSubmit}
-              className="px-4 py-2 md:px-6 md:py-3 bg-white text-black font-medium rounded-md hover:bg-black hover:text-white cursor-pointer transition-colors"
+              className="px-4 py-2 md:px-6 md:py-3 bg-white text-black font-medium rounded-md hover:bg-black hover:text-white cursor-pointer duration-500 transition-colors"
             >
               MAKE APPOINTMENT
             </button>
             
             <button
               onClick={redirectToWhatsApp}
-              className=" px-4 py-2 md:px-6 md:py-3 bg-green-600 text-white font-medium rounded-md hover:bg-green-900 cursor-pointer transition-colors flex items-center justify-center"
+              className=" px-4 py-2 md:px-6 md:py-3 bg-black text-white font-medium rounded-md hover:bg-green-900 cursor-pointer transition-colors duration-500 flex items-center justify-center"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -132,27 +135,10 @@ export const BookingForm = ()=> {
       
       {/* Right column - Content */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0">
-           <p className="inline-flex items-center gap-2 text-sm font-semibold text-white uppercase tracking-widest mb-4">
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="#444444"
-              >
-                <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-                <path
-                  d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                  fill="none"
-                  stroke="#ffff"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+           <span className="inline-flex items-center gap-2 text-sm font-semibold text-white uppercase tracking-widest mb-4">
+            <AnimationSvg />
             BOOK A SESSION
-          </p>
+          </span>
         
         <h1 className="  text-3xl md:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
           Mental Health Is a Right, Not a Privilege

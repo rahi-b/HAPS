@@ -3,6 +3,9 @@
 import { useEffect,useRef } from "react";
 import Image from "next/image";
 import Ajnas from "../public/Images/Ajnas2.jpg";
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const Testimonial = () => {
   const testimonials = [
@@ -76,27 +79,10 @@ export const Testimonial = () => {
 
       {/* Section Header */}
       <div className="text-center mb-16">
-        <p className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest">
-        <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="#444444"
-            >
-              <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-              <path
-                d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                fill="none"
-                stroke="#444444"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+        <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest">
+          <AnimationSvg />
           TESTIMONIALS
-        </p>
+        </span>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium mt-6 mb-12 tracking-tight text-gray-900">
           Honest Reviews From Our
           <br />
@@ -104,7 +90,7 @@ export const Testimonial = () => {
         </h2>
       </div>
 
-      <div className="overflow-hidden w-full py-12 bg-white" ref={wrapperRef}>
+      <div className="overflow-hidden w-full py-12" ref={wrapperRef}>
       <div
         ref={sliderRef}
         className="flex whitespace will-change-transform transition-transform ease-linear"

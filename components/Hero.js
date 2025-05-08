@@ -78,13 +78,13 @@ export const HeroSection = () => {
         >
           <Link
             href="/get-started"
-            className="bg-amber-50 hover:bg-amber-100 text-[#1c1c1a] text-sm md:text-lg font-medium py-3 md:px-8 px-6 rounded-md transition-colors w-full sm:w-auto"
+            className="bg-amber-50 hover:bg-black hover:text-white text-[#1c1c1a] text-sm md:text-lg font-medium py-3 md:px-8 px-6 rounded-md transition-colors duration-500 w-full sm:w-auto cursor-pointer"
           >
             GET STARTED
           </Link>
           <Link
             href="/contact-us"
-            className="border border-white text-white hover:bg-white/10 text-sm md:text-lg font-medium py-3 px-8 rounded-md transition-colors w-full sm:w-auto"
+            className="border border-white text-white hover:bg-white hover:text-black text-sm md:text-lg font-medium py-3 px-8 rounded-md transition-colors w-full sm:w-auto"
           >
             CONTACT US
           </Link>
