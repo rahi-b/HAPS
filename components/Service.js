@@ -5,6 +5,9 @@ import Image from "next/image";
 import FamilyService from "../public/Images/FamilyService.jpg";
 import IndividualService from "../public/Images/IndividualService.jpg";
 import CoupleService from "../public/Images/CoupleService.jpg";
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const Service = () => {
   return (
@@ -12,27 +15,10 @@ export const Service = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest mb-4">
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="#444444"
-              >
-                <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-                <path
-                  d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                  fill="none"
-                  stroke="#444444"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest mb-4">
+           <AnimationSvg />
             OUR SERVICES
-          </p>
+          </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium mt-6 mb-12 tracking-tight text-gray-900">
             Creating a World Where Mental Health <br /> Is Valued
           </h2>
@@ -206,7 +192,7 @@ export const Service = () => {
             Can&apos;t find the service you need? Contact us now for a <br />{" "}
             consultation.
           </p>
-          <button className="bg-black text-white px-6 py-3 border rounded-md text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+          <button className="bg-black text-white px-6 py-3 border rounded-md text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-colors duration-500 cursor-pointer">
             CONTACT US
           </button>
         </div>

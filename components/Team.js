@@ -4,6 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import TeamImage from "../public/Images/TeamUser.jpg";
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const Team = () => {
   const teamMembers = [
@@ -54,27 +57,10 @@ export const Team = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest mb-6">
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="18"
-                height="18"
-                fill="#444444"
-              >
-                <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-                <path
-                  d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                  fill="none"
-                  stroke="#444444"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+          <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest mb-6">
+            <AnimationSvg />
             OUR TEAM
-          </p>
+          </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-medium text-center mx-auto text-gray-900 tracking-tight">
             Meet Our Professional
             <br />
@@ -126,7 +112,7 @@ export const Team = () => {
           <p className="mb-6 text-sm md:text-3xl text-gray-900">
             Join us and get an unforgettable <br /> experience
           </p>
-          <button className="bg-white text-black px-6 py-3 border rounded-md text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer">
+          <button className="bg-white text-black px-6 py-3 border rounded-md text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-colors duration-500 cursor-pointer">
             CONTACT US
           </button>
         </div>

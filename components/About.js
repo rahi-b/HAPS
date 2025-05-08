@@ -6,6 +6,10 @@ import AboutImage from "../public/Images/AboutImage.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
+
 
 export const About = () => {
   const topics = [
@@ -53,31 +57,14 @@ export const About = () => {
     <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-10">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700">
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="18"
-              height="18"
-              fill="#444444"
-            >
-              <path d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93" />
-              <path
-                d="M12,2 L12,22 M2,12 L22,12 M4.93,4.93 L19.07,19.07 M4.93,19.07 L19.07,4.93"
-                fill="none"
-                stroke="#444444"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+          <AnimationSvg />
           ABOUT LANTERA
         </span>
       </div>
 
       <div className="grid md:grid-cols-2 gap-14 items-center">
         <div>
-          <h1 className=" text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6">
+          <h1 className=" text-3xl md:text-4xl font-medium tracking-tight text-gray-900 mb-6">
             Every Step Towards Mental Health Is a Step Towards a Better Life.
             Your Mind Deserves Peace and Care
           </h1>
@@ -96,7 +83,7 @@ export const About = () => {
             needs.
           </p>
 
-          <button className="inline-flex items-center px-6 py-3 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer">
+          <button className="inline-flex items-center px-6 py-3 border border-gray-900 text-base font-medium rounded-md text-gray-900 bg-white hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors duration-500 cursor-pointer">
             LEARN MORE
           </button>
 
@@ -104,7 +91,7 @@ export const About = () => {
             {topics.map((topic, index) => (
               <span
                 key={index}
-                className="px-3 py-1 rounded-full text-md border bg-gray-100 text-gray-800 hover:bg-[#201a32] hover:text-white"
+                className="px-3 py-1 rounded-full text-md border font-bold  bg-gray-100 text-gray-800 duration-500 hover:bg-[#201a32] hover:text-white"
               >
                 {topic}
               </span>
