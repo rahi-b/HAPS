@@ -16,7 +16,7 @@ export const Testimonial = () => {
       content:
         "Morbi id varius nisi. Curabitur vel sodales quam, vel condimentum lorem. Proin eu urna sit amet augue scelerisque mollis et vel neque ultrices massa sapien, nec rhoncus.",
       author: "Samuel Reyes",
-      role: "Lantera's Client",
+      role: "Haps's Client",
       avatar: Ajnas ,
     },
     {
@@ -26,7 +26,7 @@ export const Testimonial = () => {
       content:
         "Donec vitae quam id sem convallis rhoncus. Pellentesque nec interdum erat. Duis laoreet ex dui. Quisque ut tortor nec lorem finibus lobortis aliquet quis magna.",
       author: "Amanda Young",
-      role: "Lantera's Client",
+      role: "Haps's Client",
       avatar: Ajnas 
     },
     {
@@ -36,7 +36,7 @@ export const Testimonial = () => {
       content:
         "Suspendisse eu blandit augue. Nam ut lectus venenatis, sodales dui at, tristique odio. Aliquam blandit tristique augue, sit amet suscipit orci ultricies sit amet.",
       author: "Lucas Brown",
-      role: "Lantera's Client",
+      role: "Haps's Client",
       avatar: Ajnas
     },
   ];

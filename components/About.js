@@ -58,7 +58,7 @@ export const About = () => {
       <div className="mb-10">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700">
           <AnimationSvg />
-          ABOUT LANTERA
+          ABOUT HAPS
         </span>
       </div>
 

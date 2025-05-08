@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from '../../public/Images/Logo.png';
 
 export const Footer =() => {
   return (
@@ -7,9 +8,18 @@ export const Footer =() => {
       {/* Logo + Headline */}
       <div className="text-center mb-12 px-6">
         <Link href="/" className="inline-flex items-center mb-4">
-          <span className="text-black text-3xl font-semibold">
-            <span className="text-amber-200">&#9728;</span> Lantera
-          </span>
+          {/* <span className="text-black text-3xl font-semibold">
+            <span className="text-amber-200">&#9728;</span> HAPS
+          </span> */}
+          <div className="relative h-14 w-auto">
+                            <Image
+                              src={Logo}
+                              alt="Company Logo"
+                              height={28} // Fixed height, width will adjust proportionally
+                              priority
+                              style={{ width: "auto", objectFit: "contain" }}
+                            />
+                          </div>
         </Link>
         <p className="text-black text-2xl max-w-md mx-auto">
           In the journey of life, mental health is your compass.
@@ -17,7 +27,7 @@ export const Footer =() => {
       </div>
 
       {/* Grid Columns */}
-      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-black py-12 ">
+      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-x-80 md:pl-16 justify-center  text-black py-12 ">
         {/* Contact Column */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-black">Contact</h3>
