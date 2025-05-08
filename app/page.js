@@ -7,6 +7,7 @@ import { Service } from "@/components/Service"
 import { Team } from "@/components/Team"
 import { Faq } from "@/components/Faq"
 import { BookingForm } from "@/components/Booking component"
+import { GetStarted } from "@/components/GetStarted"
 
 export default function Home(){
   return (
@@ -14,9 +15,10 @@ export default function Home(){
       <HeroSection />
       <About />
       <OurProcess />
+      <Service />
       <WhyChooseUs />
       <Testimonial />
-      <Service />
+      <GetStarted />
       <Team />
       <Faq />
       <BookingForm />

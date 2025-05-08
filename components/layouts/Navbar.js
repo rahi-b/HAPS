@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "../../public/Images/Logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,18 @@ export const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <span className="text-white text-2xl font-semibold">
-                  <span className="text-amber-200">&#9728;</span> Lantera
-                </span>
+                {/* <span className="text-white text-2xl font-semibold">
+                  <span className="text-amber-200">&#9728;</span> HAPS
+                </span> */}
+                <div className="relative h-14 w-auto">
+                  <Image
+                    src={Logo}
+                    alt="Company Logo"
+                    height={28} // Fixed height, width will adjust proportionally
+                    priority
+                    style={{ width: "auto", objectFit: "contain" }}
+                  />
+                </div>
               </Link>
             </div>
           </div>
@@ -116,7 +126,16 @@ export const Navbar = () => {
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <Link href="/" className="text-white text-xl font-semibold">
-                  <span className="text-amber-200">&#9728;</span> Lantera
+                  {/* <span className="text-amber-200">&#9728;</span> Lantera */}
+                  <div className="relative h-14 w-auto">
+                  <Image
+                    src={Logo}
+                    alt="Company Logo"
+                    height={28} // Fixed height, width will adjust proportionally
+                    priority
+                    style={{ width: "auto", objectFit: "contain" }}
+                  />
+                </div>
                 </Link>
               </motion.div>
 
