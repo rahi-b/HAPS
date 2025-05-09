@@ -5,7 +5,7 @@ import Image from "next/image";
 import AboutImage from "../public/Images/AboutImage.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useState,useEffect } from "react";
 import dynamic from "next/dynamic";
 
 const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
@@ -42,6 +42,44 @@ export const About = () => {
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  
+  const AnimatedStatus = ({ value}) =>{
+    const [ count,setCount]= useState('0');
+    useEffect(()=>{
+       // Try to extract numeric part
+       const numericMatch = value.match(/^([0-9.]+)(.*)$/);
+
+     // If no match or not a number format, just display the value as is
+      if (!numericMatch) {
+        setCount(value);
+        return;
+      }
+
+      const numericalValue = parseFloat(numericMatch[1]);
+      const suffix = numericMatch[2]; // Get any non-numeric suffix
+      
+      if (isNaN(numericalValue)) {
+        setCount(value);
+        return;
+      }
+    
+    let start = 0;
+    const duration = 2000; // Animation duration in ms
+    const increment = numericalValue / (duration / 30);
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= numericalValue) {
+        start = numericalValue;
+        clearInterval(interval);
+      }
+      setCount(`${Math.round(start * 10) / 10}${suffix}`); // Append non-numeric part
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [value]);
+
+  return <span>{count}</span>;
+}
 
   useEffect(() => {
     if (inView) {
@@ -50,8 +88,12 @@ export const About = () => {
         scale: 1,
         transition: { duration: 1.2, ease: "easeOut" },
       });
-    }
+    };
+
+
   }, [inView, controls]);
+
+
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
@@ -121,7 +163,8 @@ export const About = () => {
         {stats.map((stat, index) => (
           <div key={index} className="border-t border-gray-200 pt-6">
             <p className=" text-4xl md:text-5xl font-bold text-gray-900">
-              {stat.value}
+              {/* {stat.value} */}
+              <AnimatedStatus value={stat.value} />
             </p>
             <p className="mt-2 text-md md:text-lg text-gray-600">
               {stat.description}
