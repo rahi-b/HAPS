@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import React from "react";
 import Image from "next/image";
-import WhyChooseImage from '../public/Images/WhyChoose.jpg'
+import WhyChooseImage from "../public/Images/WhyChoose.jpg";
+import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 
 const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
@@ -51,80 +52,88 @@ export const WhyChooseUs = () => {
             WHY CHOOSE US
           </span>
         </div>
+        <FadeInOnScroll direction="up" delay={0.1}>
+          <h2 className="text-3xl md:text-6xl font-meduim mb-6">
+            Your Mind Deserves Peace and Care
+          </h2>
+        </FadeInOnScroll>
 
-        <h2 className="text-3xl md:text-6xl font-meduim mb-6">
-          Your Mind Deserves Peace and Care
-        </h2>
-
-        <p className="text-gray-200 mb-12">
-          We believe in a holistic approach to mental health, providing
-          compassionate support and evidence-based treatments in a safe,
-          welcoming environment.
-        </p>
+        <FadeInOnScroll direction="up" delay={0.2}>
+          <p className="text-gray-200 mb-12">
+            We believe in a holistic approach to mental health, providing
+            compassionate support and evidence-based treatments in a safe,
+            welcoming environment.
+          </p>
+        </FadeInOnScroll>
 
         <div className="space-y-16">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-start">
-              <div className="mr-4 mt-1">
-                {benefit.icon === "user" && (
-                  <div className="bg-white rounded-full p-2 text-green-900">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
-                  </div>
-                )}
-                {benefit.icon === "moon" && (
-                  <div className="bg-white rounded-full p-2 text-green-900">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                      />
-                    </svg>
-                  </div>
-                )}
-                {benefit.icon === "calendar" && (
-                  <div className="bg-white rounded-full p-2 text-green-900">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                )}
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
+              <FadeInOnScroll direction="up" delay={0.3}>
+                <div className="mr-4 mt-1">
+                  {benefit.icon === "user" && (
+                    <div className="bg-white rounded-full p-2 text-green-900">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                  {benefit.icon === "moon" && (
+                    <div className="bg-white rounded-full p-2 text-green-900">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                  {benefit.icon === "calendar" && (
+                    <div className="bg-white rounded-full p-2 text-green-900">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              </FadeInOnScroll>
+
+              <FadeInOnScroll direction="up" delay={0.4}>
+                <div>
+                  <h3 className="text-xl font-medium mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              </FadeInOnScroll>
             </div>
           ))}
         </div>
