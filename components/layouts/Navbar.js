@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../../public/Images/Logo.png";
+import Logo from "../../public/Images/HapsLogo.svg";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,12 +38,12 @@ export const Navbar = () => {
                 {/* <span className="text-white text-2xl font-semibold">
                   <span className="text-amber-200">&#9728;</span> HAPS
                 </span> */}
-                <div className="relative h-14 w-auto">
+                <div className="relative h-30 w-30">
                   <Image
                     src={Logo}
                     alt="Company Logo"
-                    height={28} // Fixed height, width will adjust proportionally
                     priority
+                    className="rounded-2xl"
                     style={{ width: "auto", objectFit: "contain" }}
                   />
                 </div>
@@ -127,7 +127,7 @@ export const Navbar = () => {
               >
                 <Link href="/" className="text-white text-xl font-semibold">
                   {/* <span className="text-amber-200">&#9728;</span> Lantera */}
-                  <div className="relative h-14 w-auto">
+                  <div className="relative h-14 w-30">
                   <Image
                     src={Logo}
                     alt="Company Logo"
@@ -155,7 +155,7 @@ export const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="block text-gray-300 hover:text-amber-200 text-lg"
+                    className="block text-gray-300 hover:text-amber-200 text-lg py-2"
                   >
                     {item.text}
                   </Link>

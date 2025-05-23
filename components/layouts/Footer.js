@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../../public/Images/Logo.png';
+import Logo from '../../public/Images/HapsLogo.svg';
 import { FadeInOnScroll } from '../FadeInOnScroll';
 
 export const Footer =() => {
@@ -13,7 +13,7 @@ export const Footer =() => {
           {/* <span className="text-black text-3xl font-semibold">
             <span className="text-amber-200">&#9728;</span> HAPS
           </span> */}
-          <div className="relative h-14 w-auto">
+          <div className="relative h-14 w-30">
                             <Image
                               src={Logo}
                               alt="Company Logo"
@@ -25,7 +25,7 @@ export const Footer =() => {
         </Link>
         </FadeInOnScroll>
         <FadeInOnScroll direction='up' delay={0.2}>
-        <p className="text-black text-2xl max-w-md mx-auto">
+        <p className="text-black text-2xl max-w-md mx-auto py-5">
           In the journey of life, mental health is your compass.
         </p>
         </FadeInOnScroll>
