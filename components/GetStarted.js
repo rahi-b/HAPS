@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import GetStartedImage from "../public/Images/GetStarted.jpg";
+import GetStartedImage from "@/public/Images/GetStarted.jpg";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 

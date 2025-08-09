@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import AboutImage from "../public/Images/AboutImage.jpg";
+import AboutImage from "@/public/Images/AboutImage.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
@@ -111,19 +111,19 @@ export const About = () => {
 
           <FadeInOnScroll direction="up" delay={0.2}>
             <p className="text-md text-gray-600 mb-6">
-              We believe in providing compassionate support for your mental
-              health journey. Our team of experienced professionals is dedicated
-              to helping you find balance, healing, and growth in all aspects of
-              your life.
+              HAPS (Henna Ayoob&apos;s Psychological Services) is a mental
+              health organization offering personalized care through individual
+              and couple therapy.
             </p>
           </FadeInOnScroll>
 
           <FadeInOnScroll direction="up" delay={0.3}>
             <p className="text-md text-gray-600 mb-8">
-              Whether you&apos;re facing challenges with anxiety, trauma,
-              relationships, or simply seeking personal development, we offer
-              personalized approaches that respect your unique experiences and
-              needs.
+              Backed by a multidisciplinary team of experienced psychologists
+              and a consultant psychiatrist, HAPS provides a safe, culturally
+              sensitive space for emotional healing and personal growth.
+              We&apos;re committed to walking with you at your pace, with
+              empathy and clinical clarity
             </p>
           </FadeInOnScroll>
 

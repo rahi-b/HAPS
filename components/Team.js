@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import TeamImage from "../public/Images/TeamUser.jpg";
+import TeamImage from "@/public/Images/TeamUser.jpg";
 import { motion } from "framer-motion";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";

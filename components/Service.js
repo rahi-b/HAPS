@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FamilyService from "../public/Images/FamilyService.jpg";
-import IndividualService from "../public/Images/IndividualService.jpg";
-import CoupleService from "../public/Images/CoupleService.jpg";
+import FamilyService from "@/public/Images/FamilyService.jpg";
+import IndividualService from "@/public/Images/IndividualService.jpg";
+import CoupleService from "@/public/Images/CoupleService.jpg";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 

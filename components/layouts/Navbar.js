@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../../public/Images/HapsLogo.svg";
+import Logo from "@/public/Images/Haps-final-logo.svg";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,23 +32,18 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
-                {/* <span className="text-white text-2xl font-semibold">
-                  <span className="text-amber-200">&#9728;</span> HAPS
-                </span> */}
-                <div className="relative h-30 w-30">
+            <div className="flex-shrink-0 pt-5">
+              <Link href="/" className="flex">
+                <div className="relative h-14 w-30 items-center">
                   <Image
                     src={Logo}
                     alt="Company Logo"
                     priority
-                    className="rounded-2xl"
+                    className=""
                     style={{ width: "auto", objectFit: "contain" }}
                   />
                 </div>
               </Link>
-            </div>
           </div>
 
           {/* Desktop navigation */}

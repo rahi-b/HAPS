@@ -11,7 +11,7 @@ import { GetStarted } from "@/components/GetStarted"
 
 export default function Home(){
   return (
-    <div className="bg-[#fffcf4] font-sans">
+    <div className="bg-[#fffcf4] font-sans overflow-hidden">
       <HeroSection />
       <About />
       <OurProcess />

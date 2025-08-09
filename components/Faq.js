@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FaqImage from "../public/Images/FaqImage.jpg";
+import FaqImage from "@/public/Images/FaqImage.jpg";
 import Link from "next/link";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";

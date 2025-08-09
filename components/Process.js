@@ -10,19 +10,25 @@ export const OurProcess = () => {
   const processSteps = [
     {
       number: "01",
-      title: "Initial Consultation",
+      title: "ONE-ON-ONE SESSIONSTAILORED TO YOUR NEEDS",
       description:
         "We begin with a thorough assessment of your needs and goals to understand how we can best support your mental health journey.",
     },
     {
       number: "02",
-      title: "Scheduling and Sessions",
+      title: `A SAFE SPACE TO REFLECT,RELEASE, AND GROW`,
       description:
         "We work together to create a schedule that fits your life, ensuring consistent support through regular therapy sessions.",
     },
     {
       number: "03",
-      title: "Tailored Therapy",
+      title: "FLEXIBLE SCHEDULING THAT FITS YOUR ROUTINE",
+      description:
+        "Based on your unique needs, we develop personalized approaches that address your specific challenges and support your growth.",
+    },
+     {
+      number: "04",
+      title: "100% CONFIDENTIAL ANDJUDGMENT FREE",
       description:
         "Based on your unique needs, we develop personalized approaches that address your specific challenges and support your growth.",
     },
@@ -54,7 +60,7 @@ export const OurProcess = () => {
       </FadeInOnScroll>
 
       <FadeInOnScroll direction="up" delay={0.3}>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
             <div
               key={index}
@@ -73,9 +79,9 @@ export const OurProcess = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4 my-18 group-hover:text-white transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="text-base text-gray-600 mb-4 group-hover:text-gray-200 transition-colors duration-300">
+                {/* <p className="text-base text-gray-600 mb-4 group-hover:text-gray-200 transition-colors duration-300">
                   {step.description}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

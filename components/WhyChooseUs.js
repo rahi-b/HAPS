@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import WhyChooseImage from "../public/Images/WhyChoose.jpg";
+import WhyChooseImage from "@/public/Images/WhyChoose.jpg";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 
@@ -12,19 +12,23 @@ export const WhyChooseUs = () => {
   const benefits = [
     {
       icon: "user",
-      title: "Expert Psychologists",
-      description:
-        "Our team consists of licensed professionals with extensive experience in various mental health fields.",
+      title: "Worksheets to reflect, reset, and grow between sessions",
     },
     {
       icon: "moon",
-      title: "Personalized Care",
+      title: "🔄Follow up Support so you feel guided beyond the session ",
       description:
         "We create customized treatment plans tailored to your unique needs and personal growth journey.",
     },
     {
       icon: "calendar",
-      title: "Flexible Scheduling",
+      title: "Emotional Tools to understand your patterns and feel more in control",
+      description:
+        "We offer convenient session times that fit into your busy life, including evenings and weekends.",
+    },
+      {
+      icon: "calendar",
+      title: "👥A Compassionate Team offering care that is grounded, skilled, and human",
       description:
         "We offer convenient session times that fit into your busy life, including evenings and weekends.",
     },
@@ -49,7 +53,7 @@ export const WhyChooseUs = () => {
         <div className="mb-4">
           <span className="inline-flex items-center gap-2 text-sm font-semibold">
             <AnimationSvg />
-            WHY CHOOSE US
+            WHY CHOOSE HAPS
           </span>
         </div>
         <FadeInOnScroll direction="up" delay={0.1}>
@@ -131,7 +135,7 @@ export const WhyChooseUs = () => {
               <FadeInOnScroll direction="up" delay={0.4}>
                 <div>
                   <h3 className="text-xl font-medium mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  {/* <p className="text-gray-300">{benefit.description}</p> */}
                 </div>
               </FadeInOnScroll>
             </div>
