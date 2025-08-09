@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Ajnas from "../public/Images/Ajnas2.jpg";
+import Ajnas from "@/public/Images/Ajnas2.jpg";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 

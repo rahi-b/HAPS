@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../../public/Images/HapsLogo.svg';
+import Logo from '@/public/Images/Haps-final-logo.svg';
 import { FadeInOnScroll } from '../FadeInOnScroll';
 
 export const Footer =() => {
