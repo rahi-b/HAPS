@@ -17,7 +17,7 @@ export const Service = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest mb-4">
-            <AnimationSvg />
+            <AnimationSvg backgroundColor="#ff6b6b" />
             OUR SERVICES
           </span>
           <FadeInOnScroll direction="up" delay={0.1}>

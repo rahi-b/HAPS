@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Ajnas from "@/public/Images/Ajnas2.jpg";
+import client1 from "@/public/Images/client1.jpeg";
+import client2 from "@/public/Images/client2.jpeg";
+import client3 from "@/public/Images/client3.jpeg";
 import { FadeInOnScroll } from "./FadeInOnScroll";
 import dynamic from "next/dynamic";
 
@@ -10,37 +12,34 @@ const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 
 export const Testimonial = () => {
   const testimonials = [
-    {
-      id: 1,
-      rating: "⭐️⭐️⭐️⭐️⭐️",
-      title: "Mental health is essential",
-      content:
-        "Morbi id varius nisi. Curabitur vel sodales quam, vel condimentum lorem. Proin eu urna sit amet augue scelerisque mollis et vel neque ultrices massa sapien, nec rhoncus.",
-      author: "Samuel Reyes",
-      role: "Haps's Client",
-      avatar: Ajnas,
-    },
-    {
-      id: 2,
-      rating: "⭐️⭐️⭐️⭐️⭐️",
-      title: "Speak up for mental health",
-      content:
-        "Donec vitae quam id sem convallis rhoncus. Pellentesque nec interdum erat. Duis laoreet ex dui. Quisque ut tortor nec lorem finibus lobortis aliquet quis magna.",
-      author: "Amanda Young",
-      role: "Haps's Client",
-      avatar: Ajnas,
-    },
-    {
-      id: 3,
-      rating: "⭐️⭐️⭐️⭐️⭐️",
-      title: "Strong minds, strong lives",
-      content:
-        "Suspendisse eu blandit augue. Nam ut lectus venenatis, sodales dui at, tristique odio. Aliquam blandit tristique augue, sit amet suscipit orci ultricies sit amet.",
-      author: "Lucas Brown",
-      role: "Haps's Client",
-      avatar: Ajnas,
-    },
-  ];
+  {
+    id: 1,
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    title: "Mental health is essential",
+    content: `Hi ma'am, your support means a lot. The way you advise feels like chatting with a friend. Your guidance has shown me how to manage different aspects of my life, especially in areas where I lack confidence. Thank you for your help!`,
+    author: "Samuel Reyes",
+    role: "Haps's Client",
+    avatar: client1,
+  },
+  {
+    id: 2,
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    title: "Speak up for mental health",
+    content: `I still remember the first time I came to see you and my mindset at that time. I was totally disturbed and confused. The way you interacted with me and the tips you gave felt so soothing. I truly appreciate how you spoke with me and the advice you shared. The routine map you suggested helped heal my wounds. I understood the root cause of my issues and how to remove them from my life. Thank you from the bottom of my heart.`,
+    author: "Amanda Young",
+    role: "Haps's Client",
+    avatar: client3,
+  },
+  {
+    id: 3,
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    title: "Strong minds, strong lives",
+    content: "Suspendisse eu blandit augue. Nam ut lectus venenatis, sodales dui at, tristique odio. Aliquam blandit tristique augue, sit amet suscipit orci ultricies sit amet.",
+    author: "Lucas Brown",
+    role: "Haps's Client",
+    avatar: client2,
+  },
+];
   const sliderRef = useRef(null);
   const wrapperRef = useRef(null);
 
@@ -76,7 +75,7 @@ export const Testimonial = () => {
   }, []);
 
   return (
-    <section className="py-16 px-4 w-full mx-auto overflow-hidden">
+    <section className="py-16 w-full mx-auto overflow-hidden ">
       {/* Section Header */}
       <div className="text-center mb-16">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700 uppercase tracking-widest">
@@ -102,7 +101,7 @@ export const Testimonial = () => {
               testimonials.map((testimonial, index) => (
                 <div
                   key={`${testimonial.id}-${cloneIndex}`}
-                  className="border border-gray-200 rounded-lg p-6 mx-4 min-w-[350px] max-w-xs flex-shrink-0 bg-white/80 backdrop-blur-sm shadow-xl"
+                  className="border border-gray-200 rounded-lg flex flex-col justify-between  p-6 mx-4 min-w-[350px] max-w-xs flex-shrink-0 bg-white/80 backdrop-blur-sm shadow-xl"
                 >
                   <div className="text-xs  mb-6">{testimonial.rating}</div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
