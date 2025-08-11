@@ -5,7 +5,7 @@ import { FadeInOnScroll } from "@/components/FadeInOnScroll";
 
 export const AboutHero = () => {
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="bg-[#4b276c] text-white py-60  text-center relative z-10">
         <FadeInOnScroll direction="up" delay={0.1}>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">About Us</h1>

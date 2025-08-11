@@ -34,9 +34,9 @@ export const Faq = () => {
         "Yes, we regularly post job openings on our careers page. We're always looking for talented individuals to join our team.",
     },
     {
-      question: "How do I contact Lantera for appointment?",
+      question: "How do I contact HAPS for appointment?",
       answer:
-        "You can contact us at +1 (234) 567 890 00 or email us at lantera@mails.com to schedule an appointment.",
+        "You can contact us at +91 80-75252370 or email us at lantera@mails.com to schedule an appointment.",
     },
     {
       question: "What kind of contracts do you provide?",
@@ -90,7 +90,7 @@ export const Faq = () => {
                   </FadeInOnScroll>
                   <FadeInOnScroll direction="up" delay={0.3}>
                     <Link className="text-gray-700" href="tel:+">
-                      +1 (234) 567 890 00
+                      +91 8075252370
                     </Link>
                   </FadeInOnScroll>
                 </div>
@@ -115,7 +115,7 @@ export const Faq = () => {
                   </FadeInOnScroll>
                   <FadeInOnScroll direction="up" delay={0.5}>
                     <Link className="text-gray-700" href="mailto:">
-                      lantera@mails.com
+                      Hennaayoobps@gmail.com
                     </Link>
                   </FadeInOnScroll>
                 </div>
