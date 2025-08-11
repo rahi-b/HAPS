@@ -2,7 +2,6 @@
 
 import Lottie from 'lottie-react';
 import Animation from '../public/Animation/LottieAnimation - 1746683087711.json';
-import React, { useState, useEffect } from 'react';
 
 const AnimationSvg = ({ backgroundColor = '#ffffff' }) => {
   return (
@@ -14,7 +13,7 @@ const AnimationSvg = ({ backgroundColor = '#ffffff' }) => {
         style={{ 
           width: '20px', 
           height: '20px',
-          verticalAlign: 'middle' // Align with the button
+          verticalAlign: 'center' // Align with the button
         }}
       />
     </div>

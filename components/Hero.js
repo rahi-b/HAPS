@@ -9,6 +9,22 @@ import client3 from "@/public/Images/client3.jpeg";
 import client4 from "@/public/Images/client4.jpeg";
 
 export const HeroSection = () => {
+  const redirectToWhatsApp = () => {
+    // The phone number should be in international format without any symbols
+  const phoneNumber = "+918075252370";// Replace with your actual WhatsApp number
+
+    // Create a pre-filled message using the form data
+    const message = `Hello, I'd like to book a mental health consultation.`;
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Create the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+  };
   const avatars = [client1, client2, client3,client4];
   
   return (
@@ -92,12 +108,12 @@ export const HeroSection = () => {
           >
             GET STARTED
           </Link>
-          <Link
-            href="/contact-us"
+          <button
+           onClick={redirectToWhatsApp}
             className="border border-white text-white hover:bg-white hover:text-black text-sm md:text-lg font-medium py-3 px-8 rounded-md transition-colors duration-500 w-full sm:w-auto"
           >
             CONTACT US
-          </Link>
+          </button>
         </motion.div>
       </div>
     </motion.div>

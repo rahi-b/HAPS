@@ -31,7 +31,7 @@ export const BookingForm = () => {
 
   const redirectToWhatsApp = () => {
     // The phone number should be in international format without any symbols
-    const phoneNumber = "+918086158928"; // Replace with your actual WhatsApp number
+    const phoneNumber = "+918075252370"; // Replace with your actual WhatsApp number
 
     // Create a pre-filled message using the form data
     const message = `Hello, my name is ${formData.name}. I'd like to book a mental health consultation on ${formData.date}. ${formData.message}`;
@@ -47,7 +47,7 @@ export const BookingForm = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-row bg-[#4b276c] text-white p-8 rounded-3xl w-full max-w-7xl mx-auto py-16 my-16">
+    <div className="flex flex-col-reverse md:flex-row bg-[#4b276c] text-white p-8 rounded-3xl w-full max-w-7xl mx-auto py-16">
       {/* Left column - Form */}
       <div className="w-full md:w-1/2  pr-0 md:pr-8">
         <div className="space-y-4">
