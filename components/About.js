@@ -95,7 +95,7 @@ export const About = () => {
     <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-10">
         <span className="inline-flex items-center gap-2 text-sm font-semibold text-gray-700">
-          <AnimationSvg />
+          <AnimationSvg backgroundColor="#ff6b6b"/>
           ABOUT HAPS
         </span>
       </div>

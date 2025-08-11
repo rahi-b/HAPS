@@ -10,7 +10,7 @@ export const OurProcess = () => {
   const processSteps = [
     {
       number: "01",
-      title: "ONE-ON-ONE SESSIONSTAILORED TO YOUR NEEDS",
+      title: "ONE-ON-ONE SESSIONS TAILORED TO YOUR NEEDS",
       description:
         "We begin with a thorough assessment of your needs and goals to understand how we can best support your mental health journey.",
     },
@@ -28,7 +28,7 @@ export const OurProcess = () => {
     },
      {
       number: "04",
-      title: "100% CONFIDENTIAL ANDJUDGMENT FREE",
+      title: "100% CONFIDENTIAL AND JUDGMENT-FREE",
       description:
         "Based on your unique needs, we develop personalized approaches that address your specific challenges and support your growth.",
     },

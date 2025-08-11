@@ -11,12 +11,12 @@ const AnimationSvg = dynamic(() => import("./AnimationSvg"), { ssr: false });
 export const WhyChooseUs = () => {
   const benefits = [
     {
-      icon: "user",
+      icon: "calendar",
       title: "Worksheets to reflect, reset, and grow between sessions",
     },
     {
       icon: "moon",
-      title: "🔄Follow up Support so you feel guided beyond the session ",
+      title: "Follow up Support so you feel guided beyond the session ",
       description:
         "We create customized treatment plans tailored to your unique needs and personal growth journey.",
     },
@@ -27,8 +27,8 @@ export const WhyChooseUs = () => {
         "We offer convenient session times that fit into your busy life, including evenings and weekends.",
     },
       {
-      icon: "calendar",
-      title: "👥A Compassionate Team offering care that is grounded, skilled, and human",
+      icon: "user",
+      title: "A Compassionate Team offering care that is grounded, skilled, and human",
       description:
         "We offer convenient session times that fit into your busy life, including evenings and weekends.",
     },
@@ -52,7 +52,7 @@ export const WhyChooseUs = () => {
       <div className="w-full md:w-1/2 bg-[#4b276c] text-white p-8 md:p-12 lg:p-16">
         <div className="mb-4">
           <span className="inline-flex items-center gap-2 text-sm font-semibold">
-            <AnimationSvg />
+            <AnimationSvg backgroundColor="#4a276a"/>
             WHY CHOOSE HAPS
           </span>
         </div>

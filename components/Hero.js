@@ -3,8 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import client1 from "@/public/Images/client1.jpeg";
+import client2 from "@/public/Images/client2.jpeg";
+import client3 from "@/public/Images/client3.jpeg";
+import client4 from "@/public/Images/client4.jpeg";
 
 export const HeroSection = () => {
+  const avatars = [client1, client2, client3,client4];
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -25,22 +31,26 @@ export const HeroSection = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <div className="bg-[#1c1c1a]/70 backdrop-blur-sm rounded-full py-2 px-6 inline-flex items-center">
+          <div className="bg-[#1c1c1a]/70 backdrop-blur-sm rounded-full py-2 px-4 inline-flex items-center">
             <div className="flex -space-x-2 mr-3">
-              {[1, 2, 3, 4].map((id) => (
+              {avatars.map((avatar, index) => (
                 <div
-                  key={id}
+                  key={index}
                   className="w-8 h-8 rounded-full border-2 border-[#1c1c1a] overflow-hidden bg-gray-200"
                 >
                   <Image
-                    src={`/avatars/avatar${id}.jpg`}
+                    src={avatar}
                     width={32}
                     height={32}
-                    alt="User"
+                    alt={`User ${index + 1}`}
                     className="object-cover"
                   />
                 </div>
               ))}
+              {/* Add a fourth placeholder if needed */}
+              {/* <div className="w-8 h-8 rounded-full border-2 border-[#1c1c1a] bg-gray-400 flex items-center justify-center">
+                <span className="text-xs text-white font-medium">+</span>
+              </div> */}
             </div>
             <span className="text-white text-xs md:text-sm">
               TRUSTED BY 1000+ PEOPLE
@@ -74,7 +84,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
-          className="flex flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
             href="/get-started"
@@ -84,7 +94,7 @@ export const HeroSection = () => {
           </Link>
           <Link
             href="/contact-us"
-            className="border border-white text-white hover:bg-white hover:text-black text-sm md:text-lg font-medium py-3 px-8 rounded-md transition-colors w-full sm:w-auto"
+            className="border border-white text-white hover:bg-white hover:text-black text-sm md:text-lg font-medium py-3 px-8 rounded-md transition-colors duration-500 w-full sm:w-auto"
           >
             CONTACT US
           </Link>

@@ -47,9 +47,9 @@ export const BookingForm = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-row bg-[#4b276c] text-white p-8 rounded-3xl w-full max-w-7xl mx-auto py-16">
+    <div className="flex flex-col-reverse md:flex-row bg-[#4b276c] text-white p-8 rounded-3xl w-full max-w-7xl mx-auto py-16 my-16">
       {/* Left column - Form */}
-      <div className="w-full md:w-1/2 pr-0 md:pr-8">
+      <div className="w-full md:w-1/2  pr-0 md:pr-8">
         <div className="space-y-4">
           <FadeInOnScroll direction="up" delay={0.1}>
             <div>
