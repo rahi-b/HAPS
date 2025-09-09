@@ -48,7 +48,7 @@ export const Navbar = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
+            <div className="ml-10 flex items-center space-x-8 text-black">
               <Link
                 href="/"
                 className="text-white hover:text-amber-200 transition-colors"
@@ -57,25 +57,25 @@ export const Navbar = () => {
               </Link>
               <Link
                 href="/about"
-                className="text-gray-300 hover:text-amber-200 transition-colors"
+                className="text-white hover:text-amber-200 transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/service"
-                className="text-gray-300 hover:text-amber-200 transition-colors"
+                className="text-white hover:text-amber-200 transition-colors"
               >
                 Service
               </Link>
               <Link
                 href="/faq"
-                className="text-gray-300 hover:text-amber-200 transition-colors"
+                className="text-white hover:text-amber-200 transition-colors"
               >
                 Faq
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:text-amber-200 transition-colors"
+                className="text-white hover:text-amber-200 transition-colors"
               >
                 Contact
               </Link>
